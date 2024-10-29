@@ -1,9 +1,8 @@
 import { Metadata } from "next";
 import { Toaster } from "sonner";
 
-import { Navbar } from "@/components/custom/navbar";
+import Navbar2 from "@/components/custom/navbar2";
 import { ThemeProvider } from "@/components/custom/theme-provider";
-
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -65,7 +64,7 @@ export default async function RootLayout({
           disableTransitionOnChange
         >
           <Toaster position="top-center" />
-          <Navbar />
+          <Navbar2 />
           {children}
         </ThemeProvider>
       </body>
