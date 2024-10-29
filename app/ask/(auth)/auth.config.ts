@@ -2,8 +2,8 @@ import { NextAuthConfig } from "next-auth";
 
 export const authConfig = {
   pages: {
-    signIn: "/login",
-    newUser: "/",
+    signIn: "/ask/login",
+    newUser: "/ask",
   },
   providers: [
     // added later in auth.ts since it requires bcrypt which is only compatible with Node.js
@@ -12,12 +12,12 @@ export const authConfig = {
   callbacks: {
     authorized({ auth, request: { nextUrl } }) {
       let isLoggedIn = !!auth?.user;
-      let isOnChat = nextUrl.pathname.startsWith("/");
-      let isOnRegister = nextUrl.pathname.startsWith("/register");
-      let isOnLogin = nextUrl.pathname.startsWith("/login");
+      let isOnChat = nextUrl.pathname.startsWith("/ask");
+      let isOnRegister = nextUrl.pathname.startsWith("/ask/register");
+      let isOnLogin = nextUrl.pathname.startsWith("/ask/login");
 
       if (isLoggedIn && (isOnLogin || isOnRegister)) {
-        return Response.redirect(new URL("/", nextUrl));
+        return Response.redirect(new URL("/ask", nextUrl));
       }
 
       if (isOnRegister || isOnLogin) {
@@ -30,7 +30,7 @@ export const authConfig = {
       }
 
       if (isLoggedIn) {
-        return Response.redirect(new URL("/", nextUrl));
+        return Response.redirect(new URL("/ask", nextUrl));
       }
 
       return true;

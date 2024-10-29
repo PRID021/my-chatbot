@@ -22,8 +22,9 @@ export function Chat({
       body: { id },
       initialMessages,
       onFinish: () => {
-        window.history.replaceState({}, "", `/chat/${id}`);
+        window.history.replaceState({}, "", `/ask/chat/${id}`);
       },
+      api: "/ask/api/chat",
     });
 
   const [messagesContainerRef, messagesEndRef] =

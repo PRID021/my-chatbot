@@ -1,7 +1,7 @@
 import Form from "next/form";
 import Link from "next/link";
 
-import { auth, signOut } from "@/app/(auth)/auth";
+import { auth, signOut } from "@/app/ask/(auth)/auth";
 
 import { History } from "./history";
 import { ThemeToggle } from "./theme-toggle";
@@ -47,7 +47,7 @@ export const Navbar = async () => {
                     "use server";
 
                     await signOut({
-                      redirectTo: "/",
+                      redirectTo: "/ask",
                     });
                   }}
                 >
@@ -63,7 +63,7 @@ export const Navbar = async () => {
           </DropdownMenu>
         ) : (
           <Button className="py-1.5 px-2 h-fit font-normal" asChild>
-            <Link href="/login">Login</Link>
+            <Link href="/ask/login">Login</Link>
           </Button>
         )}
       </div>

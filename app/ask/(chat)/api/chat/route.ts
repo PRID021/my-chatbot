@@ -2,7 +2,7 @@ import { convertToCoreMessages, Message, streamText } from "ai";
 import { z } from "zod";
 
 import { customModel } from "@/ai";
-import { auth } from "@/app/(auth)/auth";
+import { auth } from "@/app/ask/(auth)/auth";
 import { deleteChatById, getChatById, getCvData, saveChat } from "@/db/queries";
 
 export async function POST(request: Request) {
