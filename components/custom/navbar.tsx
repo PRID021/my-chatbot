@@ -1,17 +1,17 @@
-import Form from 'next/form';
-import Link from 'next/link';
+import Form from "next/form";
+import Link from "next/link";
 
-import { auth, signOut } from '@/app/(auth)/auth';
+import { auth, signOut } from "@/app/(auth)/auth";
 
-import { History } from './history';
-import { ThemeToggle } from './theme-toggle';
-import { Button } from '../ui/button';
+import { History } from "./history";
+import { ThemeToggle } from "./theme-toggle";
+import { Button } from "../ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from '../ui/dropdown-menu';
+} from "../ui/dropdown-menu";
 
 export const Navbar = async () => {
   let session = await auth();
@@ -22,7 +22,7 @@ export const Navbar = async () => {
         <div className="flex flex-row gap-3 items-center">
           <History user={session?.user} />
           <div className="flex flex-row gap-2 items-center">
-            <div className="text-sm dark:text-zinc-300">Next.js Chatbot</div>
+            <div className="text-sm dark:text-zinc-300">FAQ Assistance</div>
           </div>
         </div>
 
@@ -44,10 +44,10 @@ export const Navbar = async () => {
                 <Form
                   className="w-full"
                   action={async () => {
-                    'use server';
+                    "use server";
 
                     await signOut({
-                      redirectTo: '/',
+                      redirectTo: "/",
                     });
                   }}
                 >

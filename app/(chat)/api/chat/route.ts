@@ -3,7 +3,7 @@ import { z } from "zod";
 
 import { customModel } from "@/ai";
 import { auth } from "@/app/(auth)/auth";
-import { deleteChatById, getChatById, saveChat } from "@/db/queries";
+import { deleteChatById, getChatById, getCvData, saveChat } from "@/db/queries";
 
 export async function POST(request: Request) {
   const { id, messages }: { id: string; messages: Array<Message> } =
@@ -15,12 +15,21 @@ export async function POST(request: Request) {
     return new Response("Unauthorized", { status: 401 });
   }
 
+  const cvData = await getCvData();
+
   const coreMessages = convertToCoreMessages(messages);
 
   const result = await streamText({
     model: customModel,
-    system:
-      "you are a friendly assistant! keep your responses concise and helpful.",
+    system: `
+    You are an assistant who provides answers specifically based on the user’s CV information provided below.
+    Respond in a friendly, clear, and concise manner, ensuring answers are accurate and human-like. 
+    If a question is outside the scope of the user’s CV, respond with: "I can only answer questions related to the user’s background and experience as shared."
+    Do not make any assumptions; only use the information available in the CV. 
+    
+    Here’s the user’s CV information:
+    ${cvData}
+    `,
     messages: coreMessages,
     maxSteps: 5,
     tools: {

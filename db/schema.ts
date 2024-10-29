@@ -2,6 +2,7 @@ import { Message } from "ai";
 import { InferSelectModel } from "drizzle-orm";
 import { pgTable, varchar, timestamp, json, uuid } from "drizzle-orm/pg-core";
 
+
 export const user = pgTable("User", {
   id: uuid("id").primaryKey().notNull().defaultRandom(),
   email: varchar("email", { length: 64 }).notNull(),
@@ -22,3 +23,5 @@ export const chat = pgTable("Chat", {
 export type Chat = Omit<InferSelectModel<typeof chat>, "messages"> & {
   messages: Array<Message>;
 };
+
+

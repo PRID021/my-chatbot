@@ -1,11 +1,16 @@
 "server-only";
 
+import { readFile } from 'fs/promises';
+import path from 'path';
+
+
 import { genSaltSync, hashSync } from "bcrypt-ts";
 import { desc, eq } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/postgres-js";
 import postgres from "postgres";
 
 import { user, chat, User } from "./schema";
+
 
 // Optionally, if not using email/pass login, you can
 // use the Drizzle adapter for Auth.js / NextAuth
@@ -97,4 +102,11 @@ export async function getChatById({ id }: { id: string }) {
     console.error("Failed to get chat by id from database");
     throw error;
   }
+}
+
+
+export async function getCvData() {
+  const filePath = path.join(process.cwd(), 'public', 'cv.txt');
+  console.log("File path:", filePath); // Log to confirm the path
+  return await readFile(filePath, 'utf-8');
 }

@@ -1,0 +1,51 @@
+PHAM DUC HOANG
+Ho Chi Minh, Vietnam | hoangduc.uit.dev@gmail.com | +84-376-385-401 | Linkedin | Github
+Education
+University of Information Technology – VNUHCM, Bachelor of Engineering Sep 2019 – Apr 2023
+• Major: Software Engineering
+• GPA: 8.48/10
+Experience
+Software Engineer, Intelligent T&E (ExecutionLab) Nov 2023 – Oct 2024
+• Manage projects and collaborate with agile teams to build applications from scratch, ensuring seamless
+integration and delivery.
+• Apply Clean Architecture theory and techniques like Riverpod for project structure and state management to
+ensure code quality and maintainability.
+• Using Swift and Kotlin to implement Vietnam Passport Reader.
+• Building seamless workflow leverage automation tools such Fastlane, Github Action, Firebase App Distribution.
+• Intergateing mobile app with new trends like OpenAI, Gemini using SSE techniques.
+• Primarily responsible and actively involved in maintaining the Offwork app, the company’s employee
+management app.
+Mobile Developer, Unicloud Smart Factory - HCM Aug 2022 – Aug 2023
+• Participate with the mobile team to build applications that support the business of the company.
+• Experience working with OpenAPI, building applications using bloc pattern implements by RxDart.
+• Working with the AI team and Kotlin to build impressive features, using Flutter method channel to
+communicates with the native platform.
+• Develop custom_loadmore library for speed up project development.
+Fresher Mobile Developer, Waodate April 2022– July 2022
+• Responsibility for the development of Askany mobile application and maintenance projects.
+• Familiar with libraries like Bloc and GetX for state management in applications.
+Projects
+Sheredtrip www.sherdtrip.com
+• Building and deploy successfully Sheredtrip a web application where users can post their trips experience with
+other which helps other people a better option to choose the destination for their trip for vacation.
+• Familiar with React, NextJs and Charka to successfully build an beauty and friendly website.
+Ajent Github
+• Build an mobile application to addresses the challenge students face in finding tutors during critical exam
+periods. As a team of four members, we transitioned from no prior mobile app development experience to
+successfully building a mobile app using Flutter and Firebase in just three months.
+• Get noticed by Flutter community. At peak, it has 8k+ views on GitHub. Referenced by Flutterawesome,
+Flutterappworld
+• Using GetX for state management and Firebase service like Firebase Authentication for authenticate, Firebase
+Cloud Messaging for Push Notification, Firebase Storage for storage and Firebase Realtime Database for real
+time communication feature.
+Keepital Github
+• Keepital is a mobile management application that is also a final project for the course “Software Engineering” at
+university. Got a of grade 9.0/10 for this course and helped team members understand more about Flutter.
+• Tech stack: Flutter, Firebase.
+Additional Experience And Awards
+Scholarship (2020-2021): Received a scholarship for two consecutive semesters in 2020-2021.
+Capable: Have experience and capability in building applications using frameworks like Django and FastAPI.
+Technologies
+Languages: Dart, Swift, Kotlin, Python, JavaScript
+Framework : Flutter, SwiftUI, NextJs, FastApi, Django
+Tools : VS Code, Android Studio, XCode, Git
