@@ -1054,39 +1054,22 @@ export const MoonIcon = ({ className, ...rest }: { className?: string }) => (
 
 export const LinkArrow = ({ className, ...rest }: { className?: string }) => (
   <svg
-    width="1rem"
-    height="1rem"
-    viewBox="0 0 24.00 24.00"
-    fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    stroke="#ffffff"
-    strokeWidth="0.00024000000000000003"
+    width={24}
+    height={24}
+    viewBox="0 0 24 24"
+    className={`w-full h-auto ${className}`}
+    {...rest}
   >
-    <g id="SVGRepo_bgCarrier" strokeWidth="0">
-      <rect
-        x="0"
-        y="0"
-        width="24.00"
-        height="24.00"
-        rx="12"
-        fill="#f5f5f5"
-        strokeWidth="0"
-      ></rect>
-    </g>
-    <g
-      id="SVGRepo_tracerCarrier"
+    <path fill="none" d="M0 0h24v24H0z" />
+    <path
+      fill="none"
+      stroke="currentColor"
       strokeLinecap="round"
       strokeLinejoin="round"
-      stroke="#f5f5f5"
-      strokeWidth="0.576"
-    ></g>
-    <g id="SVGRepo_iconCarrier">
-      {" "}
-      <path
-        d="M9.71069 18.2929C10.1012 18.6834 10.7344 18.6834 11.1249 18.2929L16.0123 13.4006C16.7927 12.6195 16.7924 11.3537 16.0117 10.5729L11.1213 5.68254C10.7308 5.29202 10.0976 5.29202 9.70708 5.68254C9.31655 6.07307 9.31655 6.70623 9.70708 7.09676L13.8927 11.2824C14.2833 11.6729 14.2833 12.3061 13.8927 12.6966L9.71069 16.8787C9.32016 17.2692 9.32016 17.9023 9.71069 18.2929Z"
-        fill="#0F0F0F"
-      ></path>{" "}
-    </g>
+      strokeWidth={2}
+      d="M11 7H6a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2v-5m-7 1L20 4m-5 0h5v5"
+    />
   </svg>
 );
 export const MediumIcon = ({ className, ...rest }: { className?: string }) => (
