@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useActionState, useEffect, useState } from "react";
@@ -19,7 +20,7 @@ export default function Page() {
     login,
     {
       status: "idle",
-    },
+    }
   );
 
   useEffect(() => {
@@ -38,27 +39,44 @@ export default function Page() {
   };
 
   return (
-    <div className="flex h-screen w-screen items-center justify-center bg-background">
-      <div className="w-full max-w-md overflow-hidden rounded-2xl flex flex-col gap-12">
-        <div className="flex flex-col items-center justify-center gap-2 px-4 text-center sm:px-16">
-          <h3 className="text-xl font-semibold dark:text-zinc-50">Sign In</h3>
-          <p className="text-sm text-gray-500 dark:text-zinc-400">
-            Use your email and password to sign in
-          </p>
-        </div>
-        <AuthForm action={handleSubmit} defaultEmail={email}>
-          <SubmitButton>Sign in</SubmitButton>
-          <p className="text-center text-sm text-gray-600 mt-4 dark:text-zinc-400">
+    <div className="flex min-h-screen w-full items-center justify-center bg-gray-100 p-4 sm:p-8 lg:p-16">
+      <div
+        className="flex flex-col-reverse items-center justify-between gap-2 rounded-lg bg-white p-8 shadow-lg 
+                  md:flex-row md:gap-4 md:p-12 lg:gap-8 lg:p-16"
+      >
+        <div className="flex flex-col   items-center text-center w-full md:items-start md:text-left md:w-1/2 ">
+          <h3 className="text-2xl font-bold text-gray-800 dark:text-zinc-50 mb-2">
+            Sign In
+          </h3>
+          <h4 className="text-sm text-gray-600 dark:text-zinc-400 mb-6 font-bold">
+            Sign in with your email and password to explore all available
+            features.
+          </h4>
+
+          <AuthForm action={handleSubmit} defaultEmail={email}>
+            <SubmitButton>Sign in</SubmitButton>
+          </AuthForm>
+
+          <p className="text-sm text-gray-600 dark:text-zinc-400 mt-6 mb-8">
             {"Don't have an account? "}
             <Link
               href="/ask/register"
-              className="font-semibold text-gray-800 hover:underline dark:text-zinc-200"
+              className="font-semibold text-blue-600 hover:underline"
             >
               Sign up
             </Link>
             {" for free."}
           </p>
-        </AuthForm>
+        </div>
+
+        <div className="w-full md:w-1/2 flex justify-center">
+          <Image
+            src="/images/illustration.svg"
+            alt="My Image"
+            width={600}
+            height={400}
+          />
+        </div>
       </div>
     </div>
   );
