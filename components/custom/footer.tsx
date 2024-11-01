@@ -25,11 +25,7 @@ function Footer({
           HoangPham
         </Link>
       </div>
-      <Link
-        href={"https://dev.dreaming.com"}
-        target="_blank"
-        className=" underline underline-offset-2"
-      >
+      <Link href={"/ask"} className=" underline underline-offset-2">
         Say hello
       </Link>
     </footer>
