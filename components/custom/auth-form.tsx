@@ -13,7 +13,7 @@ export function AuthForm({
   defaultEmail?: string;
 }) {
   return (
-    <Form action={action} className="flex flex-col gap-4  w-full ">
+    <Form action={action} className="flex flex-col gap-8  w-full ">
       <div className="flex flex-col gap-2 justify-between items-start ">
         <Label
           htmlFor="email"
@@ -35,7 +35,7 @@ export function AuthForm({
 
         <Label
           htmlFor="password"
-          className="text-zinc-600 font-normal dark:text-zinc-400"
+          className="text-zinc-600 font-normal dark:text-zinc-400 mt-4"
         >
           Password
         </Label>
