@@ -27,10 +27,10 @@ const CustomLink = ({
     <Link href={href} className={`${className} relative group`}>
       {title}
       <span
-        className={`
-    h-px inline-block w-0 bg-dark absolute
-    left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300 ${pathname === href && "w-full"}
-  `}
+        className={`h-px inline-block w-0 bg-black dark:bg-white absolute
+          left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300 ${
+            pathname === href ? "w-full" : ""
+          }`}
       >
         &nbsp;
       </span>
@@ -40,55 +40,71 @@ const CustomLink = ({
 
 const Navbar2: React.FC = () => {
   return (
-    <header className="w-full flex items-center justify-between px-32 pt-10 pb-8 font-medium dark:text-light">
+    <header className="w-full flex items-center justify-between px-8 pt-10 pb-8 font-medium dark:text-white">
       <nav>
-        <CustomLink href="/" title="Home" className="mr-4" />
-        <CustomLink href="/about" title="About" className="mx-4" />
-        <CustomLink href="/project" title="Project" className="mx-4" />
-        <CustomLink href="/article" title="Article" className="ml-4" />
+        <CustomLink
+          href="/"
+          title="Home"
+          className="mr-4 text-gray-800 dark:text-gray-200"
+        />
+        <CustomLink
+          href="/about"
+          title="About"
+          className="mx-4 text-gray-800 dark:text-gray-200"
+        />
+        <CustomLink
+          href="/project"
+          title="Projects"
+          className="mx-4 text-gray-800 dark:text-gray-200"
+        />
+        <CustomLink
+          href="/article"
+          title="Articles"
+          className="ml-4 text-gray-800 dark:text-gray-200"
+        />
       </nav>
 
       <nav className="flex items-center justify-center flex-wrap gap-3">
         <motion.a
           href="https://twitter.com"
           target="_blank"
-          className="size-6"
+          className="text-gray-800 dark:text-gray-200 hover:text-blue-500 transition"
           whileHover={{ y: -2 }}
           whileTap={{ scale: 0.9 }}
         >
           <TwitterIcon />
         </motion.a>
         <motion.a
-          href="https://twitter.com"
+          href="https://github.com"
           target="_blank"
-          className="size-6"
+          className="text-gray-800 dark:text-gray-200 hover:text-gray-600 transition"
           whileHover={{ y: -2 }}
           whileTap={{ scale: 0.9 }}
         >
           <GithubIcon />
         </motion.a>
         <motion.a
-          href="https://twitter.com"
+          href="https://linkedin.com"
           target="_blank"
-          className="size-6"
+          className="text-gray-800 dark:text-gray-200 hover:text-blue-700 transition"
           whileHover={{ y: -2 }}
           whileTap={{ scale: 0.9 }}
         >
           <LinkedInIcon />
         </motion.a>
         <motion.a
-          href="https://twitter.com"
+          href="https://pinterest.com"
           target="_blank"
-          className="size-6"
+          className="text-gray-800 dark:text-gray-200 hover:text-red-600 transition"
           whileHover={{ y: -2 }}
           whileTap={{ scale: 0.9 }}
         >
           <PinterestIcon />
         </motion.a>
         <motion.a
-          href="https://twitter.com"
+          href="https://dribbble.com"
           target="_blank"
-          className="size-6"
+          className="text-gray-800 dark:text-gray-200 hover:text-pink-500 transition"
           whileHover={{ y: -2 }}
           whileTap={{ scale: 0.9 }}
         >

@@ -13,19 +13,18 @@ export function AuthForm({
   defaultEmail?: string;
 }) {
   return (
-    <Form action={action} className="flex flex-col gap-8  w-full ">
-      <div className="flex flex-col gap-2 justify-between items-start ">
+    <Form action={action} className="flex flex-col gap-8 w-full ">
+      <div className="flex flex-col gap-4">
         <Label
           htmlFor="email"
-          className="text-zinc-600 font-normal dark:text-zinc-400"
+          className="text-zinc-600 dark:text-zinc-400 font-normal self-start "
         >
           Email Address
         </Label>
-
         <Input
           id="email"
           name="email"
-          className="bg-muted text-md md:text-sm"
+          className="bg-gray-100 dark:bg-gray-700 text-md md:text-sm border border-gray-300 dark:border-gray-600 rounded-md p-2"
           type="email"
           placeholder="user@acme.com"
           autoComplete="email"
@@ -35,15 +34,14 @@ export function AuthForm({
 
         <Label
           htmlFor="password"
-          className="text-zinc-600 font-normal dark:text-zinc-400 mt-4"
+          className="text-zinc-600 dark:text-zinc-400 font-normal self-start "
         >
           Password
         </Label>
-
         <Input
           id="password"
           name="password"
-          className="bg-muted text-md md:text-sm"
+          className="bg-gray-100 dark:bg-gray-700 text-md md:text-sm border border-gray-300 dark:border-gray-600 rounded-md p-2"
           type="password"
           required
         />

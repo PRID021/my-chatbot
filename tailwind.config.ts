@@ -59,9 +59,6 @@ const config: Config = {
           "4": "hsl(var(--chart-4))",
           "5": "hsl(var(--chart-5))",
         },
-        dark: "#1b1b1b",
-        light: "#f5f5f5",
-        primaryDark: "#58E6D9",
       },
       animation: {
         'spin-slow': 'spin 8s linear infinite'

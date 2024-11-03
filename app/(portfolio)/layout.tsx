@@ -2,7 +2,6 @@ import classNames from "classnames";
 import React from "react";
 
 import Footer from "@/components/custom/footer";
-import { CircularText } from "@/components/custom/icons";
 import Navbar2 from "@/components/custom/navbar2";
 
 async function PortfolioLayout({
@@ -13,7 +12,7 @@ async function PortfolioLayout({
   className?: string;
 }>) {
   return (
-    <div className="w-full h-screen flex flex-col ">
+    <div className="w-full h-screen flex flex-col bg-white dark:bg-gray-800 ">
       <div
         className={`w-full flex flex-col items-center px-32 bg-light z-0 grow ${classNames}`}
       >
@@ -21,11 +20,6 @@ async function PortfolioLayout({
         {children}
       </div>
       <Footer />
-
-      <CircularText
-        className="fixed  left-4 bottom-24  justify-center
-        overflow-hidden size-48 h-auto  fill-dark animate-spin-slow"
-      />
     </div>
   );
 }

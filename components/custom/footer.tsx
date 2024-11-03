@@ -14,7 +14,7 @@ function Footer({
     ${className}`}
     >
       <span>{new Date().getFullYear()} &copy; All Rights Reserved</span>
-      <div className="flex items-center">
+      <div className="flex items-center absolute left-1/2  -translate-x-1/2 ">
         Build With &nbsp;
         <span className="text-purple-700 text-xl">&#9825;</span>
         &nbsp;by&nbsp;

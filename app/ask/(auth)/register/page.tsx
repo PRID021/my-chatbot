@@ -39,12 +39,12 @@ export default function Page() {
   };
 
   return (
-    <div className="flex min-h-screen w-full items-center justify-center bg-gray-100 p-4 sm:p-8 lg:p-16">
-      <div className="flex flex-col items-center justify-center gap-4 w-full max-w-md rounded-lg bg-white p-8 shadow-lg md:p-12 lg:p-16">
-        <h3 className="text-2xl font-semibold text-gray-800 dark:text-zinc-50 mb-2">
+    <div className="flex min-h-screen w-full items-center justify-center bg-gray-100 dark:bg-gray-900 p-4 sm:p-8 lg:p-16">
+      <div className="flex flex-col items-center justify-center gap-4 w-full max-w-md rounded-lg bg-white dark:bg-gray-800 p-8 shadow-lg md:p-12 lg:p-16">
+        <h3 className="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-2">
           Sign Up
         </h3>
-        <p className="text-sm text-gray-600 dark:text-zinc-400 mb-6">
+        <p className="text-sm text-gray-600 dark:text-gray-400 mb-6">
           Create an account with your email and password
         </p>
 
@@ -54,16 +54,18 @@ export default function Page() {
 
         {/* Divider */}
         <div className="flex items-center justify-center w-full my-4">
-          <hr className="grow border-t border-gray-300 bg-gradient-to-r from-transparent via-gray-300 to-transparent" />
-          <span className="mx-4 text-gray-500 font-medium text-base">or</span>
-          <hr className="grow border-t border-gray-300 bg-gradient-to-r from-transparent via-gray-300 to-transparent" />
+          <hr className="grow border-t border-gray-300 dark:border-gray-600" />
+          <span className="mx-4 text-gray-500 dark:text-gray-400 font-medium text-base">
+            or
+          </span>
+          <hr className="grow border-t border-gray-300 dark:border-gray-600" />
         </div>
 
-        <p className="text-sm text-gray-600 dark:text-zinc-400 text-center">
+        <p className="text-sm text-gray-600 dark:text-gray-400 text-center">
           {"Already have an account? "}
           <Link
             href="/ask/login"
-            className="font-semibold text-blue-600 hover:underline"
+            className="font-semibold text-blue-600 dark:text-blue-400 hover:underline"
           >
             Sign in
           </Link>
